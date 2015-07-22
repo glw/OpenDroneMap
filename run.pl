@@ -776,7 +776,7 @@ sub odm_texturing {
     mkdir("$jobOptions{jobDir}-results/odm_texturing"); 
 
 	
-    run("\"$BIN_PATH/odm_texturing\" -bundleFile $jobOptions{jobDir}/pmvs/bundle.rd.out -imagesPath $jobOptions{srcDir}/ -imagesListPath $jobOptions{jobDir}/pmvs/list.rd.txt -inputModelPath $jobOptions{jobDir}-results/odm_mesh-0000.ply -outputFolder $jobOptions{jobDir}-results/odm_texturing/ -textureResolution $args{'--odm_texturing-textureResolution'} -bundleResizedTo $jobOptions{resizeTo} -textureWithSize $args{'--odm_texturing-textureWithSize'} -logFile $jobOptions{jobDir}/odm_texturing/odm_texturing_log.txt" );
+    run("\"$BIN_PATH/odm_texturing\" -bundleFile $jobOptions{jobDir}/pmvs/bundle.rd.out -imagesPath $jobOptions{jobDir}/ -imagesListPath $jobOptions{jobDir}/pmvs/list.rd.txt -inputModelPath $jobOptions{jobDir}-results/odm_mesh-0000.ply -outputFolder $jobOptions{jobDir}-results/odm_texturing/ -textureResolution $args{'--odm_texturing-textureResolution'} -bundleResizedTo $jobOptions{resizeTo} -textureWithSize $args{'--odm_texturing-textureWithSize'} -logFile $jobOptions{jobDir}/odm_texturing/odm_texturing_log.txt" );
     
     if($args{"--end-with"} ne "odm_texturing"){
         odm_georeferencing();
